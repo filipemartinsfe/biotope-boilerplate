@@ -1,0 +1,12 @@
+{
+  "stories": 
+  [
+    {
+			"partial": "components/static/bioteaser/index.bioteaser",
+      "teaserTitle1": "Learning Purposes Component",
+      "buttonText1": "Button",
+      "teaserTitle2": "Learning Purposes Component",
+      "buttonText2": "Button"
+    }
+  ]
+}

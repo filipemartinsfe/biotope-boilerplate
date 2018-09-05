@@ -2,6 +2,7 @@
 	'use strict';
 
 	$(function () {
+		var $conditionalResources = $('[data-resources]');
 
 		// listen to resourcesReady event
 		$(window).one('resourcesReady', function() {
@@ -18,7 +19,14 @@
 
 		function init() {
 			biotope.configuration.get('initCore')();
-			biotope.configuration.get('initElementFunctions')();
+
+			// initialize components
+			$conditionalResources.each(function() {
+				if ($(this).data('init')) {
+					var init = eval($(this).attr('data-init')); // jshint ignore:line
+					init($(this));
+				}
+			});
 		}
 
 	});
