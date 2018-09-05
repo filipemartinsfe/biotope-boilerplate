@@ -12,14 +12,10 @@ description: Teaser using Biotope structure
 	inject the content via contentMain variable
 --}}
 
-
-
-{{> 
-  layouts/layout.default
+{{!-- {{bioInclude 'layouts/layout.default'
 	contentMain="components/static/bioteaser/index.bioteaser"
-}}
-
-{{!-- 
-	{{bioInclude 'layouts/layout.default'
-	contentMain="scaffolding/bioteaser/bioteaser"
 }} --}}
+
+{{bioInclude 'layouts/layout.default'
+	contentMain="scaffolding/bioteaser/bioteaser"
+}}
