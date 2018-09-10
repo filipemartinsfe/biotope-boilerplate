@@ -1,4 +1,4 @@
-{($)
+((jquery: JQueryStatic, window: Window) => {
   setTimeout(function(){
 
     $('.teaser__text').each(function(){
@@ -10,4 +10,4 @@
     });
   });
     
-}(jQuery);
+})(jQuery, window);

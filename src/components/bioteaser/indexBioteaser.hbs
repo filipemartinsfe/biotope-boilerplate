@@ -1,0 +1,57 @@
+<div class="bio-teaser">
+	<div class="teaser"
+    data-resources="[{paths: ['components/bioteaser/indexBioteaser.js' , 'components/bioteaser/styles/indexBioteaser.css']}]"
+  >
+  <div class="teaser__section">
+    <div class="teaser__container">
+
+      {{!-- Teaser --}}
+      {{#each teaserSection}}
+      <div class="teaser__contentWrap {{reversed}} {{colored}}">
+        <div class="teaser__content">
+          <div class="teaser__title"> 
+            {{ title }}
+          </div>
+          <div class="teaser__text">
+            {{ text }}
+          </div>
+          <button class="teaser__button">
+            {{ button }}
+          </button>
+        </div>
+        <div class="teaser__image"></div>
+      </div>
+
+        
+      <div class="teaser__related">
+        <div class="teaser__title">
+          {{relatedTitle}}
+        </div>
+        
+        {{bioInclude 'components/accordion/accordion' }}
+
+      </div>
+      {{/each}}
+
+
+      {{!-- Teaser Reversed --}}
+       {{!-- <div class="teaser__contentWrap teaser__contentWrap--reversed teaser__contentWrap--colored">
+        <div class="teaser__content">
+          <div class="teaser__title"> 
+            {{bioDef teaserTitle2}}
+          </div>
+          <div class="teaser__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </div>
+          <button class="teaser__button">
+            {{bioDef buttonText2}}
+          </button>
+        </div>
+        <div class="teaser__image"></div>
+      </div> --}}
+
+    </div>
+  </div>
+
+  </div>
+</div>

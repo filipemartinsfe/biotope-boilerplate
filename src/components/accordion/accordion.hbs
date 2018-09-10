@@ -1,0 +1,24 @@
+<div class="bio-accordion">
+  <div 
+    class="accordion"
+    data-resources="[{paths: ['components/accordion/jquery.accordion.js', 'components/accordion/styles/accordion.css']}]"
+  >
+  
+    {{#each accordion}}
+      <div class="accordion__item">
+        <div class="accordion__header">
+          <span class="accordion__toggle">+</span>
+          <div class="accordion__text">
+            {{header}}
+          </div>
+        </div>
+        <div class="accordion__body">
+          <div class="accordion__text">
+            {{text}}
+          </div>
+        </div>
+      </div>
+    {{/each}}
+
+  </div>
+</div>

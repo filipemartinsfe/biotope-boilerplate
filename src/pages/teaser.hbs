@@ -2,13 +2,13 @@
 # These values are used for creating the index
 # It is also possible to use these inside the partials via {{ data.frontMatter.[your property] }}
 
-title: Biotope Teaser
-description: Teaser using Biotope structure
+title: Biotope
+description: Biotope exercise
 
 ---
 
 {{> 
     layouts/layout.default
-    data.components.bioteaser.bioteaserJson
-    contentMain="components/bioteaser/indexBioteaser"
+    data.components.userList.users
+    contentMain="components/userList/userList"
 }}

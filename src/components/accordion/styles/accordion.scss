@@ -1,0 +1,46 @@
+@import "../../../resources/scss/styles";
+
+.accordion {
+  width:100%;
+  height:auto;
+  
+  &__item {
+    position:relative;
+  
+    padding:0.625rem 1.250rem;
+
+    background:#333;
+    color:#fff;
+
+    &--show {
+
+      .accordion__body {
+        max-height: 20rem;
+        padding-top:1rem;
+      }
+    }
+  }
+
+  &__header {
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    cursor:pointer;
+  }
+
+  &__toggle {
+    order:2;
+    font-size:1.25rem;
+  }
+
+  &__body {
+    overflow: hidden;
+    max-height: 0;
+    transition: 800ms max-height, 600ms padding;
+  }
+
+  &__text {
+    font-size:1rem;
+    order:1;
+  }
+}

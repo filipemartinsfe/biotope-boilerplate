@@ -1,0 +1,38 @@
+{
+	"teaserSection": [
+			{
+				"title": "Learning Purposes Component",
+				"text": "can i work please",
+				"button": "Show More",
+				"relatedTitle": "Accordion Title",
+				"accordion": [
+					{
+						"header": "Accordion 1",
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+					},
+					{
+						"header": "Accordion 2",
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+					}
+				]
+			},
+			{
+				"title": "Component Purposes Learning",
+				"text": "can i work please",
+				"button": "Show More",
+				"reversed": "teaser__contentWrap--reversed",
+				"colored": "teaser__contentWrap--colored",
+				"relatedTitle": "Accordion Title Reversed",
+				"accordion": [
+					{
+						"header": "Accordion 1 Reversed",
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+					},
+					{
+						"header": "Accordion 2 Reversed",
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+					}
+				]
+			}
+	]
+}
