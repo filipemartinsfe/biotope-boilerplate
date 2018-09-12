@@ -1,7 +1,10 @@
 @import "../../../resources/scss/styles";
 
-.teaser {
+body {
+  overflow-x:hidden;
+}
 
+.teaser {
   &__section {
     background: $lightgrey;
     width: 100vw;
@@ -141,9 +144,36 @@
     border: 0.125rem solid $lightblue;
     color: $white;
     margin: 0 1.5rem 2.5rem 1.5rem;
+    cursor: pointer;
 
     @media(min-width: $large) {
       margin: 0;
     }
+  }
+
+  &__related {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+
+    &--show {
+      display: block;
+    }
+  }
+  &__relatedTitle {
+    padding: 2rem 1.5rem;
+    color: #fff;
+    font-size: 2.75rem;
+  }
+  &__accordionClose {
+    font-size: 2rem;
+    float: right;
+    display: block;
+    color: #fff;
+    cursor: pointer;
   }
 }
