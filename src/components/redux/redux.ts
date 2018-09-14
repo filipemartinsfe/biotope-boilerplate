@@ -13,8 +13,12 @@ const initialState: AppState = {
 };
 
 const actions = {
+  // { selected } o valor nunca é lido... mas preciso
+  // dele ali para receber um valor o que faço ?
   toggle({ selected }: AppState, element: SelectedAction): AppState {
-    return { selected: selected = element.payload }
+    // atribuir valor á propriedade selected do appState
+    // igual ao valor do payload(index) do elemento.
+    return { selected: element.payload };
   },
 };
 
@@ -27,6 +31,8 @@ const update = () => {
     .querySelectorAll('.toggle'));
 
   toggle.forEach((element: HTMLElement) => element.classList.remove('toggle--active'));
+  // selected.selected é o mesmo que dizer vai buscar ao appState a propriedade selected
+  // (que vai ser igual ao payload(index) como referido na action)
   toggle[selected.selected].classList.add('toggle--active');
 };
 

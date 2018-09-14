@@ -1,0 +1,49 @@
+.bank {
+  height: 100vh;
+  width: 100vw;
+  background: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+   
+  &__balance {
+   background: #fff;
+   width: 24rem;
+   height: 12rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color:tomato;
+   font-size:2rem;
+   border-radius: .5rem;
+   margin-bottom: 1.75rem;
+  }
+  
+  &__withdraw, &__deposit {
+   margin: .5rem;
+  }
+  
+  &__btn {
+   margin-top: 1rem;
+   width: 14rem;
+   height: 3rem;
+   border-radius: .5rem;
+   border: none;
+   font-size:.875rem;
+   text-transform:uppercase;
+   outline: none;
+   cursor: pointer;
+   
+   &--deposit {
+    background: #ffa31a;
+    color: #fff;
+   }
+   
+   &--withdraw {
+    background: #ff944d;
+    color:#fff;
+   }
+  }
+ } 
