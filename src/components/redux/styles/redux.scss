@@ -1,0 +1,16 @@
+button {
+  margin:2rem 0 2rem 2rem;
+  padding:0.5rem 1rem;
+ }
+ 
+ .toggle {
+  display:inline-block;
+  width:100px;
+  height:100px;
+  background:tomato;
+  &--active {
+   background:goldenrod;
+  }
+ }
+ 
+ 

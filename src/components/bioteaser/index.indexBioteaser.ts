@@ -1,18 +1,17 @@
 
-  ///<reference types="jquery"/>
+  /// <reference types="jquery"/>
 
 (function(jquery: JQueryStatic, window: any, document: any) {
-
   /**
    * A sample jQuery plugin written in Typescript.
    */
 
-   const refClasses = {
+  const refClasses = {
     teaserCloseButton: '.teaser__accordionClose',
     teaserButton: '.teaser__button',
     teaserClose: '.teaser__accordionClose',
-    teaserRelated: '.teaser__related'
-   }
+    teaserRelated: '.teaser__related',
+  };
 
   class Plugin
   {
@@ -59,12 +58,12 @@
       });
     }
 
-    private toggleOverlay( {target}:Event ):void {
+    private toggleOverlay({ target }: Event): void {
       const relatedContent = (target as HTMLElement).parentElement.parentElement.nextElementSibling;
       relatedContent.classList.add('teaser__related--show');
     }
 
-    private closeOverlay():void {
+    private closeOverlay(): void {
       this.teaserCloseButtonArray.forEach((element: HTMLElement) => {
         element.closest(refClasses.teaserRelated).classList.remove('teaser__related--show');
       });
@@ -73,14 +72,11 @@
 
   jquery.fn[Plugin.pluginName] = function() {
     return this.each(function() {
-      let $this = $(this);
-      if(!$this.data(Plugin.pluginName)) {
+      const $this = $(this);
+      if (!$this.data(Plugin.pluginName)) {
         $this.data(Plugin.pluginName, new Plugin(this));
       }
     });
   };
-
 })(jQuery, window, document);
-
-    
 

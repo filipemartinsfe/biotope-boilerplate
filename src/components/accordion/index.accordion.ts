@@ -1,3 +1,4 @@
+import { store } from '../accordion/reducer';
 
 ((jquery: JQueryStatic) => {
   const refClasses = {
@@ -33,26 +34,29 @@
 
     private toggleAccordion(parent: HTMLElement): () => void {
       return () => {
-        if (parent.classList.contains('accordion__item--show')){
-          parent.classList.remove('accordion__item--show');
-          parent.querySelector('.accordion__toggle').innerHTML = '+';
-        } else {
-          this.accordionItems.forEach((element) => {
-            element.classList.remove('accordion__item--show');
-            element.querySelector('.accordion__toggle').innerHTML = '+';
-          });
-          
-          parent.classList.add('accordion__item--show');
-          parent.querySelector('.accordion__toggle').innerHTML = '-';
-        }
+        const headerId = (parent.firstElementChild as HTMLElement).getAttribute('id');
+        store.dispatch({ type: 'toggle', id: headerId });
+
+        // if (parent.classList.contains('accordion__item--show')){
+        //   parent.classList.remove('accordion__item--show');
+        //   parent.querySelector('.accordion__toggle').innerHTML = '+';
+        // } else {
+        //   this.accordionItems.forEach((element) => {
+        //     element.classList.remove('accordion__item--show');
+        //     element.querySelector('.accordion__toggle').innerHTML = '+';
+        //   });
+
+        //   parent.classList.add('accordion__item--show');
+        //   parent.querySelector('.accordion__toggle').innerHTML = '-';
+        // }
       };
-    };
+    }
   }
 
   jquery.fn[Plugin.pluginName] = function() {
     return this.each(function() {
-      let $this = $(this);
-      if(!$this.data(Plugin.pluginName)) {
+      const $this = $(this);
+      if (!$this.data(Plugin.pluginName)) {
         $this.data(Plugin.pluginName, new Plugin(this));
       }
     });

@@ -1,13 +1,13 @@
 <div class="bio-accordion">
   <div 
     class="accordion"
-    data-resources="[{paths: ['components/accordion/index.accordion.js', 'components/accordion/styles/accordion.css']}]"
+    data-resources="[{paths: ['components/accordion/reducer.js', 'components/accordion/index.accordion.js', 'components/accordion/styles/accordion.css']}]"
     data-init="(function($element) { $element.accordionPlugin() })"
   >
 
     {{#each accordion}}
-      <div class="accordion__item {{position}}">
-        <div class="accordion__header">
+      <div class="accordion__item">
+        <div class="accordion__header" id="{{position}}">
           <span class="accordion__toggle">&plus;</span>
           <div class="accordion__text">
             {{header}}
