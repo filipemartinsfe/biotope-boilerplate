@@ -1,42 +1,31 @@
-import * as Redux from 'redux';
-import { createStore } from 'redux';
+// import * as Redux from 'redux';
+// import { createStore } from 'redux';
 
 
-interface SelectedAction extends AppState {
-  payload: number;
-}
+// const reducer = (state, action: Redux.Action) => {
+//   switch (action.type) {
+//     case 'WITHDRAW-MONEY':
+//       return { state };
+//     case 'DEPOSIT-MONEY':
+//       return { state };
+//     default:
+//       return state;
+//   }
+// };
 
-interface AppState {
-  selected: number;
-}
+// const store = createStore(reducer, initialState);
 
-const initialState: AppState = {
-  selected: null,
-};
+// const update = () => {
+//   const state = (store.getState());
+//   console.log(state);
+// };
 
-const reducer = (state: AppState, action: Redux.Action) => {
-  console.log(state.selected);
-  switch (action.type) {
-    case 'WITHDRAW-MONEY':
-      return { selected: state.selected };
-    case 'DEPOSIT-MONEY':
-      return { selected: state.selected };
-    default:
-      return state;
-  }
-};
+// store.subscribe(update);
 
-const store = createStore(reducer, initialState);
+// const withdrawBtn = document.getElementById('withdraw');
+// const depositBtn = document.getElementById('deposit');
 
-const update = () => {
-  const state = (store.getState() as AppState);
-  console.log(state);
-};
-
-store.subscribe(update);
-
-const withdrawBtn = document.getElementById('withdraw');
-const depositBtn = document.getElementById('deposit');
-
-withdrawBtn.addEventListener('click', () => store.dispatch({ type: 'WITHDRAW-MONEY', payload: '5000' }));
-depositBtn.addEventListener('click', () => store.dispatch({ type: 'DEPOSIT-MONEY', payload: '10000' }));
+// withdrawBtn.addEventListener('click', () =>
+// store.dispatch({ type: 'WITHDRAW-MONEY', payload: '5000' }));
+// depositBtn.addEventListener('click', () =>
+// store.dispatch({ type: 'DEPOSIT-MONEY', payload: '10000' }));

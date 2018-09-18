@@ -32,10 +32,9 @@ import { store } from '../accordion/reducer';
       });
     }
 
-    private toggleAccordion(parent: HTMLElement): () => void {
+    private toggleAccordion(element: HTMLElement): () => void {
       return () => {
-        const headerId = (parent.firstElementChild as HTMLElement).getAttribute('id');
-        store.dispatch({ type: 'toggle', id: headerId });
+        store.dispatch({ type: 'toggle', id: +(element.getAttribute('id')) });
 
         // if (parent.classList.contains('accordion__item--show')){
         //   parent.classList.remove('accordion__item--show');
