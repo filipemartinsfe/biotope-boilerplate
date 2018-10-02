@@ -21,6 +21,7 @@
     position: relative;
     height: 20rem;
     color: #fff;
+    cursor: pointer;
   }
 
   &__img {
@@ -39,7 +40,7 @@
     font-size: 0.875rem;
     font-weight: 500;
 
-    pointer-events: none;
+    cursor: text;
   }
 
   &__content {
@@ -49,7 +50,7 @@
 
     padding: 1rem;
 
-    pointer-events: none;
+    cursor: text;
   }
 
   &__title {

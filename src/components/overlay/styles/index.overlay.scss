@@ -72,6 +72,7 @@
     font-weight: 700;
 
     color:tomato;
+    cursor: text;
   }
 
   &__description {
@@ -80,10 +81,12 @@
     font-size: 1rem;
     font-family: "Sunflower";
     font-weight:300;
+    cursor: text;
   }
 
   &__toVisit {
     text-align: left;
+    cursor: text;
 
     @media (min-width:767px) {
       text-align: right;
@@ -109,6 +112,7 @@
     text-transform: capitalize;
 
     color: #333;
+    cursor: text;
   }
 
   &__close {
