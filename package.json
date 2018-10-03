@@ -24,6 +24,7 @@
     "@types/jquery": "3.3.2",
     "@types/mocha": "^5.2.5",
     "@types/modernizr": "3.5.1",
+    "@types/node": "^10.11.3",
     "awesome-typescript-loader": "^5.2.1",
     "breakpoint-sass": "2.7.1",
     "contentful": "^7.0.4",
